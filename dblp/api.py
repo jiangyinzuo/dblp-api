@@ -43,7 +43,6 @@ def search(queries: list[str]) -> list[dict]:
         hit = r.get('result').get('hits').get('hit')
         if hit is not None:
             info = hit[0].get('info')
-            # print(info)
             entry['title'] = info.get('title')
             entry['year'] = info.get('year')
             entry['venue'] = info.get('venue')
